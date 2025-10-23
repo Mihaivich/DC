@@ -68,7 +68,7 @@ const Government = () => {
           <h2>Our Government Contracting Process</h2>
           <div className="process-steps">
             <div className="process-step">
-              <div className="step-number">1</div>
+              <div className="step-number-gov">1</div>
               <div className="step-content">
                 <h3>Initial Consultation</h3>
                 <p>We begin with a thorough understanding of your agency's needs and objectives.</p>
@@ -76,7 +76,7 @@ const Government = () => {
             </div>
             
             <div className="process-step">
-              <div className="step-number">2</div>
+              <div className="step-number-gov">2</div>
               <div className="step-content">
                 <h3>Proposal Development</h3>
                 <p>Our team develops a comprehensive proposal tailored to your specific requirements.</p>
@@ -84,7 +84,7 @@ const Government = () => {
             </div>
             
             <div className="process-step">
-              <div className="step-number">3</div>
+              <div className="step-number-gov">3</div>
               <div className="step-content">
                 <h3>Contract Negotiation</h3>
                 <p>We work with your contracting officers to finalize terms and conditions.</p>
@@ -92,7 +92,7 @@ const Government = () => {
             </div>
             
             <div className="process-step">
-              <div className="step-number">4</div>
+              <div className="step-number-gov">4</div>
               <div className="step-content">
                 <h3>Project Execution</h3>
                 <p>Our experienced team implements the solution according to agreed specifications.</p>
@@ -100,7 +100,7 @@ const Government = () => {
             </div>
             
             <div className="process-step">
-              <div className="step-number">5</div>
+              <div className="step-number-gov">5</div>
               <div className="step-content">
                 <h3>Ongoing Support</h3>
                 <p>We provide continued support and maintenance as needed throughout the contract period.</p>
