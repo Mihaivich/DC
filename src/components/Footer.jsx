@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Diversity Connected</h3>
             <p>
-              Empowering businesses with strategic solutions in project
+              Helping businesses grow with smart solutions in project
               management, logistics, and marketing.
             </p>
             <div className="social-icons">

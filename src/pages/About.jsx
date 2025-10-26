@@ -6,10 +6,7 @@ const About = () => {
     <div className="about">
       <div className="about-header">
         <h1>About Us</h1>
-        <p>
-          Learn about our journey, mission, and the team behind Diversity
-          Connected
-        </p>
+        <p>Our Story, Mission, and Leadership</p>
       </div>
 
       <div className="about-content">
