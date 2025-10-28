@@ -72,7 +72,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>
             &copy; {new Date().getFullYear()} ITC4850 Information Technology
-            Project· Built by Jie Zheng.
+            Project · Built by Jie Zheng.
           </p>
           <div className="footer-legal">
             <a href="#">Privacy Policy</a>
