@@ -1,7 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Contact.css";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // 显示成功消息
+    setShowSuccessMessage(true);
+
+    // 清空表单
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      subject: "",
+      message: "",
+    });
+
+    // 3秒后隐藏成功消息
+    setTimeout(() => {
+      setShowSuccessMessage(false);
+    }, 3000);
+  };
+
   return (
     <div className="contact">
       <div className="contact-header">
@@ -13,25 +51,53 @@ const Contact = () => {
         <div className="contact-grid">
           <div className="contact-form-container">
             <h2>Send Us a Message</h2>
-            <form className="contact-form">
+
+            <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input type="text" id="name" name="name" required />
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" name="email" required />
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="phone">Phone</label>
-                <input type="tel" id="phone" name="phone" />
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleInputChange}
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="subject">Subject</label>
-                <input type="text" id="subject" name="subject" required />
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
+                  required
+                />
               </div>
 
               <div className="form-group">
@@ -40,6 +106,8 @@ const Contact = () => {
                   id="message"
                   name="message"
                   rows="5"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   required
                 ></textarea>
               </div>
@@ -47,6 +115,12 @@ const Contact = () => {
               <button type="submit" className="submit-button">
                 Send Message
               </button>
+
+              {showSuccessMessage && (
+                <div className="success-message">
+                  <p>We took your information. You will be contacted soon!</p>
+                </div>
+              )}
             </form>
           </div>
 

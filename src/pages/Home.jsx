@@ -1,7 +1,13 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import '../styles/Home.css';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/contact');
+  };
   return (
     <div className="home">
       <section className="hero">
@@ -9,7 +15,7 @@ const Home = () => {
           <h1>Empowering Businesses with Strategic Solutions</h1>
           <h2>Project Management, Logistics, and Marketing</h2>
           <p>Driving success with 20+ years of expertise and Fortune 500 trust</p>
-          <button className="cta-button">Learn More</button>
+          <button className="cta-button" onClick={handleLearnMoreClick}>Learn More</button>
         </div>
       </section>
 
