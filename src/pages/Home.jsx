@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import StatCard from '../components/StatCard';
 
 const Home = () => {
   const navigate = useNavigate();
@@ -17,16 +18,18 @@ const Home = () => {
         }}
       >
         <div className="max-w-4xl px-5 sm:px-8 lg:px-20">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4 leading-tight">
+          <h1 className="font-bold mb-4 leading-tight" style={{ fontSize: 'clamp(2.2rem, 4vw, 3rem)' }}>
             Empowering Businesses with Strategic Solutions
           </h1>
-          <h2 className="text-2xl sm:text-3xl font-normal mb-6 leading-relaxed">
+          <h2 className="font-normal mb-6 leading-relaxed" style={{ fontSize: 'clamp(1.5rem, 3vw, 2rem)' }}>
             Project Management, Logistics, and Marketing
           </h2>
           <p className="text-base sm:text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
             Driving success with 20+ years of expertise and Fortune 500 trust
           </p>
-          <button className="px-6 py-3 sm:px-8 sm:py-4 bg-sky-400 hover:bg-primary text-white border-none rounded-lg text-base sm:text-lg font-bold cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
+          <button 
+          onClick={handleLearnMoreClick}
+          className="px-6 py-3 sm:px-8 sm:py-4 bg-sky-400 hover:bg-primary text-white border-none rounded-lg text-base sm:text-lg font-bold cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg">
             Learn More
           </button>
         </div>
@@ -35,26 +38,29 @@ const Home = () => {
       {/* Stats Section */}
       <section className="py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-20 bg-light">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          <div className="bg-white p-6 sm:p-8 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <h3 className="text-2xl sm:text-3xl text-primary font-bold mb-3">20+ Years</h3>
-            <p className="text-lg sm:text-xl font-semibold mb-2">of Experience</p>
-            <span className="text-sm sm:text-base text-gray-600">Managing large-scale projects</span>
-          </div>
-          <div className="bg-white p-6 sm:p-8 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <h3 className="text-2xl sm:text-3xl text-primary font-bold mb-3">$6M+</h3>
-            <p className="text-lg sm:text-xl font-semibold mb-2">in Contract Management Annually</p>
-            <span className="text-sm sm:text-base text-gray-600">Handling major corporate contracts</span>
-          </div>
-          <div className="bg-white p-6 sm:p-8 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <h3 className="text-2xl sm:text-3xl text-primary font-bold mb-3">Government-Ready</h3>
-            <p className="text-lg sm:text-xl font-semibold mb-2">Certifications</p>
-            <span className="text-sm sm:text-base text-gray-600">WOSB, WBENC and 8(a) (pending)</span>
-          </div>
-          <div className="bg-white p-6 sm:p-8 rounded-xl text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-            <h3 className="text-2xl sm:text-3xl text-primary font-bold mb-3">Trusted by</h3>
-            <p className="text-lg sm:text-xl font-semibold mb-2">Fortune 500 Companies</p>
-            <span className="text-sm sm:text-base text-gray-600">Walmart, CVS, Target, Luster Products</span>
-          </div>
+          <StatCard
+            mainNumber="20+ Years"
+            title="of Experience"
+            subtitle="Managing large-scale projects"
+          />
+          
+          <StatCard
+            mainNumber="$6M+"
+            title="in Contract Management Annually"
+            subtitle="Handling major corporate contracts"
+          />
+          
+          <StatCard
+            mainNumber="Government-Ready"
+            title="Certifications"
+            subtitle="WOSB, WBENC and 8(a) (pending)"
+          />
+          
+          <StatCard
+            mainNumber="Trusted by"
+            title="Fortune 500 Companies"
+            subtitle="Walmart, CVS, Target, Luster Products"
+          />
         </div>
       </section>
 
@@ -64,14 +70,14 @@ const Home = () => {
         style={{ backgroundColor: '#1a1a2e' }}
       >
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-8">Our Mission</h2>
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed mb-6">
+          <h2 className="font-bold mb-8" style={{ fontSize: '2.5rem' }}>Our Mission</h2>
+          <p className="mb-5" style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
             At Diversity Connected, we are committed to helping businesses thrive by delivering expert project management, 
             seamless logistics solutions, and innovative marketing strategies. With over 20 years of experience, 
             we specialize in managing large-scale projects, ensuring operational efficiency, and driving sustainable 
             growth for our clients.
           </p>
-          <p className="text-base sm:text-lg lg:text-xl leading-relaxed">
+          <p style={{ fontSize: '1.1rem', lineHeight: '1.8' }}>
             Whether you're a Fortune 500 company or a growing business looking to streamline operations, 
             we bring expertise, reliability, and government-certified capabilities to the table.
           </p>

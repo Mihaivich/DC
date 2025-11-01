@@ -1,25 +1,32 @@
 import React from "react";
-import "../styles/About.css";
+import PageHeader from "../components/PageHeader";
+import TeamMember from "../components/TeamMember";
 
 const About = () => {
   return (
-    <div className="about">
-      <div className="about-header">
-        <h1>About Us</h1>
-        <p>Our Story, Mission, and Leadership</p>
-      </div>
+    <div className="w-full">
+      <PageHeader
+        backgroundImage="/src/assets/images/about-bg.svg"
+        title="About Us"
+        subtitle="Our Story, Mission, and Leadership"
+      />
 
-      <div className="about-content">
-        <section className="about-story">
-          <h2>Our Story</h2>
-          <p>
+      <div className="max-w-6xl mx-auto py-16 px-5">
+        <section className="mb-16">
+          <h2
+            className="text-center mb-8 font-bold text-black"
+            style={{ fontSize: "2.2rem" }}
+          >
+            Our Story
+          </h2>
+          <p className="mb-5" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
             Founded over 20 years ago, Diversity Connected began with a vision
             to transform how businesses approach project management, logistics,
             and marketing. Our founder recognized a gap in the market for
             integrated solutions that could help companies streamline operations
             while maintaining quality and efficiency.
           </p>
-          <p>
+          <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
             What started as a small consulting firm has grown into a trusted
             partner for Fortune 500 companies and government agencies alike.
             Throughout our journey, we've maintained our commitment to
@@ -27,33 +34,58 @@ const About = () => {
           </p>
         </section>
 
-        <section className="about-values">
-          <h2>Our Values</h2>
-          <div className="values-grid">
-            <div className="value-item">
-              <h3>Excellence</h3>
-              <p>
+        <section className="mb-16">
+          <h2
+            className="text-center mb-8 font-bold text-black"
+            style={{ fontSize: "2.2rem" }}
+          >
+            Our Values
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-light p-8 rounded-xl shadow-lg">
+              <h3
+                className="text-primary font-bold mb-4"
+                style={{ fontSize: "1.5rem" }}
+              >
+                Excellence
+              </h3>
+              <p style={{ fontSize: "1rem", lineHeight: "1.6" }}>
                 We strive for excellence in every project, delivering results
                 that exceed expectations.
               </p>
             </div>
-            <div className="value-item">
-              <h3>Integrity</h3>
-              <p>
+            <div className="bg-light p-8 rounded-xl shadow-lg">
+              <h3
+                className="text-primary font-bold mb-4"
+                style={{ fontSize: "1.5rem" }}
+              >
+                Integrity
+              </h3>
+              <p style={{ fontSize: "1rem", lineHeight: "1.6" }}>
                 We operate with transparency and honesty in all our business
                 dealings.
               </p>
             </div>
-            <div className="value-item">
-              <h3>Innovation</h3>
-              <p>
+            <div className="bg-light p-8 rounded-xl shadow-lg">
+              <h3
+                className="text-primary font-bold mb-4"
+                style={{ fontSize: "1.5rem" }}
+              >
+                Innovation
+              </h3>
+              <p style={{ fontSize: "1rem", lineHeight: "1.6" }}>
                 We embrace new technologies and approaches to solve complex
                 business challenges.
               </p>
             </div>
-            <div className="value-item">
-              <h3>Diversity</h3>
-              <p>
+            <div className="bg-light p-8 rounded-xl shadow-lg">
+              <h3
+                className="text-primary font-bold mb-4"
+                style={{ fontSize: "1.5rem" }}
+              >
+                Diversity
+              </h3>
+              <p style={{ fontSize: "1rem", lineHeight: "1.6" }}>
                 We celebrate diversity in our team, our thinking, and our
                 solutions.
               </p>
@@ -61,29 +93,33 @@ const About = () => {
           </div>
         </section>
 
-        <section className="about-team">
-          <h2>Our Leadership Team</h2>
-          <div className="team-grid">
-            <div className="team-member">
-              <div className="member-photo"></div>
-              <h3>Sara Gregory</h3>
-              <p>Founder & CEO</p>
-            </div>
-            <div className="team-member">
-              <div className="member-photo"></div>
-              <h3>John Smith</h3>
-              <p>Chief Operations Officer</p>
-            </div>
-            <div className="team-member">
-              <div className="member-photo"></div>
-              <h3>Sarah Johnson</h3>
-              <p>Director of Project Management</p>
-            </div>
-            <div className="team-member">
-              <div className="member-photo"></div>
-              <h3>Michael Brown</h3>
-              <p>Head of Government Relations</p>
-            </div>
+        <section>
+          <h2
+            className="text-center mb-8 font-bold text-black"
+            style={{ fontSize: "2.2rem" }}
+          >
+            Our Leadership Team
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <TeamMember
+              name="Sara Gregory"
+              position="Founder & CEO"
+            />
+            
+            <TeamMember
+              name="John Smith"
+              position="Chief Operations Officer"
+            />
+            
+            <TeamMember
+              name="Sarah Johnson"
+              position="Director of Project Management"
+            />
+            
+            <TeamMember
+              name="Michael Brown"
+              position="Head of Government Relations"
+            />
           </div>
         </section>
       </div>
