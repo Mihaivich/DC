@@ -2,12 +2,13 @@ import React from "react";
 import PageHeader from "../components/PageHeader";
 import ServiceCard from "../components/ServiceCard";
 import ProcessStep from "../components/ProcessStep";
+import expertiseBg from "../assets/images/expertise-bg.png";
 
 const Expertise = () => {
   return (
     <div className="w-full">
       <PageHeader
-        backgroundImage="/src/assets/images/expertise-bg.svg"
+        backgroundImage={expertiseBg}
         title="Our Expertise"
         subtitle="Core Services and Strategic Approach"
       />

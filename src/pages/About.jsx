@@ -1,12 +1,17 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
 import TeamMember from "../components/TeamMember";
+import aboutBg from "../assets/images/about-bg.png";
+import sara from "../assets/images/sara.png";
+import john from "../assets/images/john.jpg";
+import david from "../assets/images/david.png";
+import michael from "../assets/images/michael.png";
 
 const About = () => {
   return (
     <div className="w-full">
       <PageHeader
-        backgroundImage="/src/assets/images/about-bg.svg"
+        backgroundImage={aboutBg}
         title="About Us"
         subtitle="Our Story, Mission, and Leadership"
       />
@@ -102,21 +107,25 @@ const About = () => {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             <TeamMember
+              avatar={sara}
               name="Sara Gregory"
               position="Founder & CEO"
             />
-            
+
             <TeamMember
+              avatar={john}
               name="John Smith"
               position="Chief Operations Officer"
             />
-            
+
             <TeamMember
-              name="Sarah Johnson"
+              avatar={david}
+              name="David Kim"
               position="Director of Project Management"
             />
-            
+
             <TeamMember
+              avatar={michael}
               name="Michael Brown"
               position="Head of Government Relations"
             />

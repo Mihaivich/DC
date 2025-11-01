@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import ContactInfo from '../components/ContactInfo';
-
+import contactBg from "../assets/images/contact-bg.jpg";
+console.log('contactBg:', contactBg);
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -44,7 +45,7 @@ const Contact = () => {
   return (
     <div className="w-full">
       <PageHeader
-        backgroundImage="/src/assets/images/contact-bg.svg"
+        backgroundImage={contactBg}
         title="Contact Us"
         subtitle="Connect with Our Team"
       />

@@ -1,11 +1,12 @@
 import React from "react";
 import PageHeader from "../components/PageHeader";
+import governmentBg from "../assets/images/government-bg.webp";
 
 const Government = () => {
   return (
     <div className="w-full">
       <PageHeader
-        backgroundImage="/src/assets/images/government-bg.svg"
+        backgroundImage={governmentBg}
         title="Government Contracting"
         subtitle="Certifications and Contracting Capabilities"
       />
