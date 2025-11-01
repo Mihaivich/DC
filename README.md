@@ -54,11 +54,42 @@ Redesign and rebuild the Diversity Connected website using a modern React-based 
 - **Frontend Framework**: React 19.1.1
 - **Build Tool**: Vite 7.1.7
 - **Routing**: React Router DOM 7.9.4
-- **Styling**: Modern CSS solutions
+- **Styling**: TailwindCSS 3.x (Utility-first CSS framework)
+- **Component Architecture**: Modular, reusable component design
 - **Icons**: Font Awesome
 - **Performance**: Optimized asset loading and code splitting
-- **Responsive Design**: Mobile-first approach
+- **Responsive Design**: Mobile-first approach with TailwindCSS responsive utilities
 - **Deployment**: Netlify (Continuous Deployment)
+
+
+## 🏗️ Architecture & Design Improvements
+
+### TailwindCSS Migration
+The project underwent a complete styling migration from CSS modules to TailwindCSS, bringing significant benefits:
+
+- **Utility-First Approach**: Replaced custom CSS with utility classes for faster development
+- **Consistent Design System**: Unified spacing, colors, and typography across all components
+- **Reduced Bundle Size**: Eliminated unused CSS through TailwindCSS's purge functionality
+- **Enhanced Responsiveness**: Leveraged TailwindCSS's responsive utilities for better mobile experience
+- **Developer Experience**: Improved maintainability with inline styling approach
+
+### Component-Based Architecture
+Implemented a modular component system to improve code reusability and maintainability:
+
+#### Core Components Created:
+- **ServiceCard**: Reusable service display cards with icons, titles, descriptions, and feature lists
+- **ProcessStep**: Numbered process step components for workflow visualization
+- **StatCard**: Statistical display cards with main numbers, titles, and subtitles
+- **TeamMember**: Team member profile cards with avatars, names, and positions
+- **ContactInfo**: Contact information display components with icons, titles, and content
+- **PageHeader**: Consistent page header component with titles and descriptions
+
+#### Benefits Achieved:
+- **Code Reduction**: Eliminated ~400 lines of repetitive code across pages
+- **Consistency**: Ensured uniform styling and behavior across similar elements
+- **Maintainability**: Centralized component logic for easier updates and bug fixes
+- **Scalability**: Easy to extend and modify components for future requirements
+- **Reusability**: Components can be easily reused across different pages and contexts
 
 
 ## 👥 Team & Project Management
