@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import ContactInfo from '../components/ContactInfo';
+import GoogleMap from '../components/GoogleMap';
 import contactBg from "../assets/images/contact-bg.jpg";
-console.log('contactBg:', contactBg);
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -140,27 +140,15 @@ const Contact = () => {
             <h2 className="mb-6 md:mb-8 font-bold text-2xl md:text-3xl" style={{ color: '#1a1a2e' }}>Contact Information</h2>
             
             <ContactInfo
-              icon="fas fa-map-marker-alt"
-              title="Address"
-              content={
-                <>
-                  123 Business Avenue, Suite 500
-                  <br />
-                  Chicago, IL 60601
-                </>
-              }
-            />
-
-            <ContactInfo
               icon="fas fa-phone"
               title="Phone"
-              content="(312) 555-1234"
+              content="(708) 557-1774"
             />
 
             <ContactInfo
               icon="fas fa-envelope"
               title="Email"
-              content="info@diversityconnected.com"
+              content="Sara.Gregory@DiversityConnected.com"
             />
 
             <ContactInfo
@@ -175,7 +163,11 @@ const Contact = () => {
               }
             />
 
-            <div>
+            <div className="mt-8">
+              <GoogleMap />
+            </div>
+
+            <div className="mt-6">
               <h3 className="mb-3 md:mb-4 font-medium text-lg md:text-xl" style={{ color: '#1a1a2e' }}>Connect With Us</h3>
               <div className="flex gap-3 md:gap-4">
                 <a href="#" className="flex items-center justify-center w-10 h-10 bg-gray-100 rounded-full text-gray-800 no-underline transition-all duration-300 hover:bg-blue-500 hover:text-white hover:-translate-y-1">
