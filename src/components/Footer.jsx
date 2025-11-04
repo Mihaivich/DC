@@ -3,14 +3,12 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer className="text-white" style={{ padding: "50px 0" }}>
-      <div className="navbar-glassmorphism max-w-6xl mx-auto px-20 pb-5 pt-10">
-        <div
-          className="grid gap-10 mb-10"
-          style={{
-            gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-          }}
-        >
+    <footer
+      className="text-white px-5 sm:px-8 lg:px-20"
+      style={{ paddingTop: "50px", paddingBottom: "50px" }}
+    >
+      <div className="navbar-glassmorphism max-w-6xl mx-auto px-8 sm:px-10 lg:px-20 pb-5 pt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 mb-10">
           <div>
             <h3
               className="text-2xl mb-5 relative font-bold"
@@ -231,7 +229,7 @@ const Footer = () => {
                     marginTop: "5px",
                   }}
                 ></i>
-                Sara.Gregory@DiversityConnected.com
+                Sara.Gregory@DC.com
               </p>
             </address>
           </div>

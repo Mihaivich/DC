@@ -108,7 +108,7 @@ const Home = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="py-10 sm:py-10 lg:py-10 px-5 sm:px-8 lg:px-20 text-white">
+      <section className="py-10 px-5 sm:px-8 lg:px-20 text-white">
         <div className="mx-auto text-center navbar-glassmorphism w-fit max-w-4xl">
           <div className="p-8 sm:p-10 lg:p-12">
             <h2 className="font-bold mb-8" style={{ fontSize: "2.5rem" }}>
