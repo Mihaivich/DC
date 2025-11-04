@@ -30,8 +30,8 @@ void main() {
   q /= max(uScale, 0.0001);
   q /= 0.5 + 0.2 * dot(q, q);
   q += 0.2 * cos(t) - 7.56;
-  vec2 toward = (uPointer - rp);
-  q += toward * uMouseInfluence * 0.2;
+  // vec2 toward = (uPointer - rp);
+  // q += toward * uMouseInfluence * 0.2;
 
     vec3 col = vec3(0.0);
     float a = 1.0;
@@ -276,6 +276,8 @@ export default function ColorBends({
     const container = containerRef.current;
     if (!material || !container) return;
 
+    // 注释掉鼠标移动事件监听器以避免卡顿
+    /*
     const handlePointerMove = e => {
       const rect = container.getBoundingClientRect();
       const x = ((e.clientX - rect.left) / (rect.width || 1)) * 2 - 1;
@@ -287,6 +289,7 @@ export default function ColorBends({
     return () => {
       container.removeEventListener('pointermove', handlePointerMove);
     };
+    */
   }, []);
 
   return (
