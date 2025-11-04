@@ -3,14 +3,8 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <footer
-      className="text-white"
-      style={{
-        backgroundColor: "#1a1a2e",
-        padding: "60px 0 20px",
-      }}
-    >
-      <div className="max-w-6xl mx-auto px-5">
+    <footer className="text-white" style={{ padding: "50px 0" }}>
+      <div className="navbar-glassmorphism max-w-6xl mx-auto px-20 pb-5 pt-10">
         <div
           className="grid gap-10 mb-10"
           style={{
@@ -34,7 +28,7 @@ const Footer = () => {
                   bottom: "-10px",
                   width: "50px",
                   height: "2px",
-                  backgroundColor: "#4cc9f0",
+                  backgroundColor: "white",
                 }}
               ></span>
             </h3>
@@ -53,16 +47,10 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/diversity-connected/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "#4cc9f0")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)")
-                }
               >
                 <i className="fab fa-linkedin"></i>
               </a>
@@ -70,16 +58,10 @@ const Footer = () => {
                 href="https://x.com/i/flow/login?redirect_after_login=%2Fdiverse_connect"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "#4cc9f0")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)")
-                }
               >
                 <i className="fab fa-x-twitter"></i>
               </a>
@@ -87,16 +69,10 @@ const Footer = () => {
                 href="https://www.facebook.com/diversityconnected"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "#4cc9f0")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)")
-                }
               >
                 <i className="fab fa-facebook"></i>
               </a>
@@ -104,16 +80,10 @@ const Footer = () => {
                 href="https://www.instagram.com/diversityconnected/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1"
+                className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
                 }}
-                onMouseEnter={(e) =>
-                  (e.target.style.backgroundColor = "#4cc9f0")
-                }
-                onMouseLeave={(e) =>
-                  (e.target.style.backgroundColor = "rgba(255, 255, 255, 0.1)")
-                }
               >
                 <i className="fab fa-instagram"></i>
               </a>
@@ -137,7 +107,7 @@ const Footer = () => {
                   bottom: "-10px",
                   width: "50px",
                   height: "2px",
-                  backgroundColor: "#4cc9f0",
+                  backgroundColor: "white",
                 }}
               ></span>
             </h3>
@@ -145,10 +115,7 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="/"
-                  className="text-gray-300 no-underline transition-colors duration-300 ease-in-out hover:text-blue-400"
-                  style={{ color: "#ccc" }}
-                  onMouseEnter={(e) => (e.target.style.color = "#4cc9f0")}
-                  onMouseLeave={(e) => (e.target.style.color = "#ccc")}
+                  className="text-gray-300 no-underline font-medium transition-all duration-300 navbar-text-glow"
                 >
                   Home
                 </Link>
@@ -156,10 +123,7 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="/about"
-                  className="text-gray-300 no-underline transition-colors duration-300 ease-in-out hover:text-blue-400"
-                  style={{ color: "#ccc" }}
-                  onMouseEnter={(e) => (e.target.style.color = "#4cc9f0")}
-                  onMouseLeave={(e) => (e.target.style.color = "#ccc")}
+                  className="text-gray-300 no-underline font-medium transition-all duration-300 navbar-text-glow"
                 >
                   About Us
                 </Link>
@@ -167,10 +131,7 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="/expertise"
-                  className="text-gray-300 no-underline transition-colors duration-300 ease-in-out hover:text-blue-400"
-                  style={{ color: "#ccc" }}
-                  onMouseEnter={(e) => (e.target.style.color = "#4cc9f0")}
-                  onMouseLeave={(e) => (e.target.style.color = "#ccc")}
+                  className="text-gray-300 no-underline font-medium transition-all duration-300 navbar-text-glow"
                 >
                   Our Expertise
                 </Link>
@@ -178,10 +139,7 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="/government"
-                  className="text-gray-300 no-underline transition-colors duration-300 ease-in-out hover:text-blue-400"
-                  style={{ color: "#ccc" }}
-                  onMouseEnter={(e) => (e.target.style.color = "#4cc9f0")}
-                  onMouseLeave={(e) => (e.target.style.color = "#ccc")}
+                  className="text-gray-300 no-underline font-medium transition-all duration-300 navbar-text-glow"
                 >
                   Government Contracting
                 </Link>
@@ -189,10 +147,7 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="/contact"
-                  className="text-gray-300 no-underline transition-colors duration-300 ease-in-out hover:text-blue-400"
-                  style={{ color: "#ccc" }}
-                  onMouseEnter={(e) => (e.target.style.color = "#4cc9f0")}
-                  onMouseLeave={(e) => (e.target.style.color = "#ccc")}
+                  className="text-gray-300 no-underline font-medium transition-all duration-300 navbar-text-glow"
                 >
                   Contact
                 </Link>
@@ -217,7 +172,7 @@ const Footer = () => {
                   bottom: "-10px",
                   width: "50px",
                   height: "2px",
-                  backgroundColor: "#4cc9f0",
+                  backgroundColor: "white",
                 }}
               ></span>
             </h3>

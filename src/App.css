@@ -11,7 +11,6 @@
 body {
   line-height: 1.5;
   color: #333;
-  background-color: #fff;
 }
 
 .app {
@@ -30,4 +29,80 @@ a {
 
 button {
   cursor: pointer;
+}
+
+/* 毛玻璃效果样式 */
+.navbar-glassmorphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(24px) saturate(200%) brightness(1.1);
+  -webkit-backdrop-filter: blur(24px) saturate(200%) brightness(1.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* 导航栏文字发光效果 */
+.navbar-text-glow:hover {
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* 社交媒体链接白色发光效果（无缩放） */
+.social-glow:hover {
+  text-shadow: 
+    0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.5),
+    0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.navbar-glassmorphism-mobile {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  -webkit-backdrop-filter: blur(20px) saturate(180%) brightness(1.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .navbar-glassmorphism-mobile {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+  }
+}
+
+.button-primary {
+  background: white;
+  color: black;
+  border-radius: 50px; /* 使用足够大的值实现完全圆角 */
+  padding: 14px 40px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-secondary {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 14px 40px;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.button-secondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 
+    0 0 20px rgba(255, 255, 255, 0.3),
+    0 0 40px rgba(255, 255, 255, 0.1),
+    inset 0 0 20px rgba(255, 255, 255, 0.05);
+  transform: scale(1.02); /* 轻微放大 */
 }

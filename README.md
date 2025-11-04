@@ -3,17 +3,16 @@
 **ITC4850: Information Technology Project - Capstone Course**  
 Northeastern University | Fall 2025
 
-
 ## 📋 Project Overview
 
 This repository contains the capstone project for ITC4850, where our team redesigned and rebuilt the Diversity Connected website using modern web technologies. This project represents the capstone of our IT program, combining technical skills with real-world project management practices.
 
 ### Course Objectives
+
 - Execute a complete IT project in a collaborative team environment
 - Apply skills from across the IT discipline to solve real-world problems
 - Demonstrate effective project management and team coordination
 - Deliver a production-ready solution with proper documentation
-
 
 ## 🌐 Project Status
 
@@ -22,13 +21,14 @@ This repository contains the capstone project for ITC4850, where our team redesi
 
 > **Note**: This redesigned website is an independent educational project created for ITC4850. Due to lack of sponsor response, this version has no official affiliation with Diversity Connected organization.
 
-
 ## 🎯 Project Goals
 
 ### Primary Objective
+
 Redesign and rebuild the Diversity Connected website using a modern React-based technology stack to address critical performance, maintainability, and user experience issues present in the legacy WordPress implementation.
 
 ### Key Improvements
+
 - **Performance**: Eliminate frontend bloat and reduce page load times
 - **Modern Stack**: Migrate from outdated PHP/WordPress to React ecosystem
 - **Maintainability**: Replace complex page builder dependencies with clean, maintainable code
@@ -38,12 +38,14 @@ Redesign and rebuild the Diversity Connected website using a modern React-based 
 ## 🛠️ Technology Stack
 
 ### Legacy Stack (Original Website)
+
 - **CMS**: WordPress 6.7.2 with Elementor 3.28.3
 - **Backend**: PHP 7.4.33 (End-of-Life) + MySQL
 - **Frontend**: jQuery, Backbone.js, multiple legacy libraries
 - **Theme**: Astra 4.8.13
 
 **Critical Issues Identified:**
+
 - Outdated PHP version (no security updates)
 - Heavy frontend bloat from Elementor
 - Multiple redundant JavaScript libraries
@@ -51,20 +53,28 @@ Redesign and rebuild the Diversity Connected website using a modern React-based 
 - Suboptimal mobile responsiveness
 
 ### New Stack (Redesigned Website)
+
 - **Frontend Framework**: React 19.1.1
 - **Build Tool**: Vite 7.1.7
 - **Routing**: React Router DOM 7.9.4
-- **Styling**: TailwindCSS 3.x (Utility-first CSS framework)
+- **Styling**: TailwindCSS 3.4.18 (Utility-first CSS framework)
+- **3D Graphics**: Three.js 0.181.0 + React Three Fiber 9.4.0
+- **Animations**: GSAP 3.13.0 + TailwindCSS Animate 1.0.7
+- **Icons**: Font Awesome 6.7.1
+- **Utilities**:
+  - Class Variance Authority 0.7.1 (Component variants)
+  - Tailwind Merge 3.3.1 (Class merging)
+  - CLSX 2.1.1 (Conditional classes)
+- **WebGL**: OGL 1.0.11 (Lightweight WebGL library)
 - **Component Architecture**: Modular, reusable component design
-- **Icons**: Font Awesome
 - **Performance**: Optimized asset loading and code splitting
 - **Responsive Design**: Mobile-first approach with TailwindCSS responsive utilities
 - **Deployment**: Netlify (Continuous Deployment)
 
-
 ## 🏗️ Architecture & Design Improvements
 
 ### TailwindCSS Migration
+
 The project underwent a complete styling migration from CSS modules to TailwindCSS, bringing significant benefits:
 
 - **Utility-First Approach**: Replaced custom CSS with utility classes for faster development
@@ -74,33 +84,47 @@ The project underwent a complete styling migration from CSS modules to TailwindC
 - **Developer Experience**: Improved maintainability with inline styling approach
 
 ### Component-Based Architecture
+
 Implemented a modular component system to improve code reusability and maintainability:
 
 #### Core Components Created:
+
 - **ServiceCard**: Reusable service display cards with icons, titles, descriptions, and feature lists
 - **ProcessStep**: Numbered process step components for workflow visualization
 - **StatCard**: Statistical display cards with main numbers, titles, and subtitles
 - **TeamMember**: Team member profile cards with avatars, names, and positions
 - **ContactInfo**: Contact information display components with icons, titles, and content
 - **PageHeader**: Consistent page header component with titles and descriptions
+- **SpotlightCard**: Interactive cards with spotlight hover effects and gradient backgrounds
+- **ColorBends**: Advanced 3D background component using Three.js with dynamic color gradients
+- **ChromaGrid**: Animated grid background with color transitions
+- **LightRays**: Dynamic light ray effects for visual enhancement
+- **DarkVeil**: Overlay component for creating depth and focus effects
+- **Silk**: Smooth animated background textures
+- **GoogleMap**: Integrated Google Maps component for location display
+- **Navbar**: Responsive navigation bar with smooth animations and mobile menu
+- **Footer**: Site footer with social media links and contact information
 
 #### Benefits Achieved:
+
 - **Code Reduction**: Eliminated ~400 lines of repetitive code across pages
 - **Consistency**: Ensured uniform styling and behavior across similar elements
 - **Maintainability**: Centralized component logic for easier updates and bug fixes
 - **Scalability**: Easy to extend and modify components for future requirements
 - **Reusability**: Components can be easily reused across different pages and contexts
 
-
 ## 👥 Team & Project Management
 
 ### Collaboration Tools
+
 - **Project Management**: Jira
 - **Version Control**: Git/GitHub
 - **Communication**: Discord
 
 ### Project Methodology
+
 This project follows **Agile methodology** with emphasis on:
+
 - Sprint planning and execution
 - Task tracking and burndown charts
 - Code reviews and quality assurance
@@ -111,6 +135,7 @@ This project follows **Agile methodology** with emphasis on:
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 ```bash
 Node.js (v18 or higher)
 pnpm (recommended) or npm
@@ -118,6 +143,7 @@ Git
 ```
 
 ### Installation
+
 ```bash
 # Clone the repository
 git clone https://github.com/Mihaivich/DC.git
@@ -133,6 +159,7 @@ pnpm run dev
 ```
 
 ### Available Scripts
+
 ```bash
 pnpm run dev       # Run development server (http://localhost:5173)
 pnpm run build     # Create production build
@@ -141,23 +168,56 @@ pnpm run preview   # Preview production build locally
 ```
 
 ### Deployment
-The project is automatically deployed to Netlify on every push to the main branch.
 
+The project is automatically deployed to Netlify on every push to the main branch.
 
 ## 📁 Project Structure
 
 ```
 DC/
 ├── public/              # Static assets
+│   └── _redirects       # Netlify redirect rules
 ├── src/
-│   ├── components/      # React components (Navbar, Footer)
-│   ├── pages/          # Page components (Home, About, etc.)
-│   ├── assets/         # Images, fonts, etc.
-│   ├── styles/         # CSS/styling files
+│   ├── components/      # React components
+│   │   ├── ChromaGrid.jsx       # Animated grid background
+│   │   ├── ColorBends.jsx       # 3D background with Three.js
+│   │   ├── ContactInfo.jsx      # Contact information display
+│   │   ├── DarkVeil.jsx         # Overlay effects
+│   │   ├── Footer.jsx           # Site footer
+│   │   ├── GoogleMap.jsx        # Google Maps integration
+│   │   ├── LightRays.jsx        # Dynamic light effects
+│   │   ├── Navbar.jsx           # Navigation bar
+│   │   ├── PageHeader.jsx       # Page headers
+│   │   ├── ProcessStep.jsx      # Process step components
+│   │   ├── ServiceCard.jsx      # Service display cards
+│   │   ├── Silk.jsx             # Animated textures
+│   │   ├── SpotlightCard.jsx    # Interactive spotlight cards
+│   │   ├── StatCard.jsx         # Statistical display cards
+│   │   └── TeamMember.jsx       # Team member profiles
+│   ├── pages/          # Page components
+│   │   ├── About.jsx            # About page
+│   │   ├── Contact.jsx          # Contact page
+│   │   ├── Expertise.jsx        # Expertise page
+│   │   ├── Government.jsx       # Government services page
+│   │   └── Home.jsx             # Home page
+│   ├── assets/         # Static assets
+│   │   └── images/             # Image files
+│   │       ├── david.png       # Team member photos
+│   │       ├── john.jpg
+│   │       ├── michael.png
+│   │       └── sara.png
+│   ├── lib/            # Utility libraries
+│   │   └── utils.js            # Utility functions
+│   ├── App.css         # Global CSS styles
 │   ├── App.jsx         # Main App component
 │   ├── main.jsx        # Application entry point
-│   └── index.css       # Global styles
+│   └── index.css       # Base styles
+├── components.json     # Component configuration
+├── eslint.config.js    # ESLint configuration
 ├── index.html          # HTML template
+├── jsconfig.json       # JavaScript configuration
+├── postcss.config.js   # PostCSS configuration
+├── tailwind.config.js  # TailwindCSS configuration
 ├── vite.config.js      # Vite configuration
 ├── package.json        # Dependencies and scripts
 ├── pnpm-lock.yaml      # Lock file for pnpm
@@ -167,11 +227,18 @@ DC/
 ## 🔍 Key Features
 
 - **Modern React Architecture**: Component-based design for better maintainability
+- **Advanced 3D Graphics**: Three.js integration with dynamic backgrounds and visual effects
+- **Interactive Animations**: GSAP-powered smooth animations and transitions
+- **Spotlight Effects**: Interactive cards with dynamic spotlight hover effects
+- **Dynamic Backgrounds**: Multiple animated background components (ColorBends, ChromaGrid, LightRays)
 - **Performance Optimized**: Lazy loading, code splitting, and optimized assets
 - **Fully Responsive**: Mobile-first design ensuring great UX on all devices
+- **Modern UI Components**: Reusable component library with consistent design system
+- **Smooth Hover Effects**: White glow effects and smooth transitions across interactive elements
+- **Google Maps Integration**: Interactive maps for location display
 - **Accessible**: WCAG compliance for inclusive user experience
 - **SEO Friendly**: Proper meta tags and semantic HTML structure
-
+- **Custom CSS Utilities**: TailwindCSS with custom animations and effects
 
 ## 🤝 Contributing
 
@@ -184,6 +251,7 @@ This is an academic project for ITC4850. Team members should follow these guidel
 5. Update Jira tickets accordingly
 
 ### Commit Message Convention
+
 ```
 feat: Add new feature
 fix: Bug fix
@@ -197,6 +265,7 @@ chore: Build process or auxiliary tool changes
 ## 🎓 Learning Outcomes
 
 Through this project, team members developed skills in:
+
 - Full-stack web development with React
 - Project management using Agile methodologies
 - Team collaboration and version control
@@ -219,6 +288,7 @@ This project is created for educational purposes as part of the ITC4850 capstone
 ## 📞 Contact
 
 For questions about this project, please contact the team through:
+
 - GitHub Issues
 - Jira Project Board
 

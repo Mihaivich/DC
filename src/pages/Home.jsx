@@ -1,7 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import StatCard from "../components/StatCard";
-import heroBg from "../assets/images/hero-bg.png";
+import ColorBends from "../components/ColorBends";
+import SpotlightCard from "../components/SpotlightCard";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -12,93 +13,124 @@ const Home = () => {
   return (
     <div className="w-full">
       {/* Hero Section */}
-      <section
-        className="relative flex items-center justify-center text-white text-center"
-        style={{
-          height: "calc(100vh - 80px)",
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(${heroBg})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-        }}
-      >
-        <div className="max-w-4xl px-5 sm:px-8 lg:px-20">
+      <section className="relative flex items-center justify-center text-white text-center h-screen overflow-hidden">
+        {/* ColorBends 背景 */}
+        <div className="fixed inset-0 z-0">
+          <ColorBends />
+        </div>
+
+        {/* 半透明遮罩层增强文字可读性 */}
+        {/* <div className="absolute inset-0 bg-black/20 z-5"></div> */}
+
+        {/* 内容层 */}
+        <div className="relative z-10 max-w-4xl px-5 sm:px-8 lg:px-20">
           <h1
-            className="font-bold mb-4 leading-tight"
+            className="font-bold mb-4 leading-tight drop-shadow-lg"
             style={{ fontSize: "clamp(2.2rem, 4vw, 3rem)" }}
           >
             Empowering Businesses with Strategic Solutions
           </h1>
           <h2
-            className="font-normal mb-6 leading-relaxed"
+            className="font-normal mb-6 leading-relaxed drop-shadow-md"
             style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
           >
             Project Management, Logistics, and Marketing
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl mx-auto drop-shadow-md">
             Driving success with 20+ years of expertise and Fortune 500 trust
           </p>
-          <button
-            onClick={handleLearnMoreClick}
-            className="px-6 py-3 sm:px-8 sm:py-4 bg-sky-400 hover:bg-primary text-white border-none rounded-lg text-base sm:text-lg font-bold cursor-pointer transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-lg"
-          >
+          <button onClick={handleLearnMoreClick} className="button-secondary">
             Learn More
           </button>
         </div>
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-20 bg-light">
+      <section className="py-10 sm:py-10 lg:py-10 px-5 sm:px-8 lg:px-20">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
-          <StatCard
-            mainNumber="20+ Years"
-            title="of Experience"
-            subtitle="Managing large-scale projects"
-          />
-
-          <StatCard
-            mainNumber="$6M+"
-            title="in Contract Management Annually"
-            subtitle="Handling major corporate contracts"
-          />
-
-          <StatCard
-            mainNumber="Government-Ready"
-            title="Certifications"
-            subtitle="WOSB, WBENC and 8(a) (pending)"
-          />
-
-          <StatCard
-            mainNumber="Trusted by"
-            title="Fortune 500 Companies"
-            subtitle="Walmart, CVS, Target, Luster Products"
-          />
+          <SpotlightCard
+            className="custom-spotlight-card text-white p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            spotlightColor="rgba(0, 229, 255, 0.5)"
+          >
+            <h3 className="text-white font-bold" style={{ fontSize: "1.8rem" }}>
+              20+ Years
+            </h3>
+            <p className="text-lg sm:text-xl font-semibold mb-1">
+              of Experience
+            </p>
+            <span className="text-sm sm:text-base text-white">
+              Managing large-scale projects
+            </span>
+          </SpotlightCard>
+          <SpotlightCard
+            className="custom-spotlight-card text-white p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            spotlightColor="rgba(0, 229, 255, 0.5)"
+          >
+            <h3 className="text-white font-bold" style={{ fontSize: "1.8rem" }}>
+              $6M+
+            </h3>
+            <p className="text-lg sm:text-xl font-semibold mb-1">
+              Annual Contract Value
+            </p>
+            <span className="text-sm sm:text-base text-white">
+              Handling major corporate contracts
+            </span>
+          </SpotlightCard>
+          <SpotlightCard
+            className="custom-spotlight-card text-white p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            spotlightColor="rgba(0, 229, 255, 0.5)"
+          >
+            <h3 className="text-white font-bold" style={{ fontSize: "1.8rem" }}>
+              Gov-Ready
+            </h3>
+            <p className="text-lg sm:text-xl font-semibold mb-1">
+              Certifications
+            </p>
+            <span className="text-sm sm:text-base text-white">
+              WOSB, WBENC and 8(a) (pending)
+            </span>
+          </SpotlightCard>
+          <SpotlightCard
+            className="custom-spotlight-card text-white p-6 sm:p-8 text-center shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2"
+            spotlightColor="rgba(0, 229, 255, 0.5)"
+          >
+            <h3 className="text-white font-bold" style={{ fontSize: "1.8rem" }}>
+              Trusted by
+            </h3>
+            <p className="text-lg sm:text-xl font-semibold mb-1">
+              Fortune 500 Companies
+            </p>
+            <span className="text-sm sm:text-base text-white">
+              Walmart, CVS, Target, Luster Products
+            </span>
+          </SpotlightCard>
         </div>
       </section>
 
       {/* Mission Section */}
-      <section
-        className="py-16 sm:py-20 lg:py-24 px-5 sm:px-8 lg:px-20 text-white"
-        style={{ backgroundColor: "#1a1a2e" }}
-      >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="font-bold mb-8" style={{ fontSize: "2.5rem" }}>
-            Our Mission
-          </h2>
-          <p className="mb-5" style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
-            At Diversity Connected, we are committed to helping businesses
-            thrive by delivering expert project management, seamless logistics
-            solutions, and innovative marketing strategies. With over 20 years
-            of experience, we specialize in managing large-scale projects,
-            ensuring operational efficiency, and driving sustainable growth for
-            our clients.
-          </p>
-          <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
-            Whether you're a Fortune 500 company or a growing business looking
-            to streamline operations, we bring expertise, reliability, and
-            government-certified capabilities to the table.
-          </p>
+      <section className="py-10 sm:py-10 lg:py-10 px-5 sm:px-8 lg:px-20 text-white">
+        <div className="mx-auto text-center navbar-glassmorphism w-fit max-w-4xl">
+          <div className="p-8 sm:p-10 lg:p-12">
+            <h2 className="font-bold mb-8" style={{ fontSize: "2.5rem" }}>
+              Our Mission
+            </h2>
+            <p
+              className="mb-5"
+              style={{ fontSize: "1.1rem", lineHeight: "1.8" }}
+            >
+              At Diversity Connected, we are committed to helping businesses
+              thrive by delivering expert project management, seamless logistics
+              solutions, and innovative marketing strategies. With over 20 years
+              of experience, we specialize in managing large-scale projects,
+              ensuring operational efficiency, and driving sustainable growth
+              for our clients.
+            </p>
+            <p style={{ fontSize: "1.1rem", lineHeight: "1.8" }}>
+              Whether you're a Fortune 500 company or a growing business looking
+              to streamline operations, we bring expertise, reliability, and
+              government-certified capabilities to the table.
+            </p>
+          </div>
         </div>
       </section>
     </div>

@@ -3,12 +3,8 @@ import React from "react";
 const PageHeader = ({ backgroundImage, title, subtitle, className = "" }) => {
   return (
     <div
-      className={`text-white text-center py-24 px-5 ${className}`}
-      style={{
-        background: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5)), url('${backgroundImage}')`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
+      className={`text-white text-center pt-40 pb-20 px-5 ${className}`}
+      
     >
       <h1
         className="mb-4 font-bold"
