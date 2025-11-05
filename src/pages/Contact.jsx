@@ -50,14 +50,14 @@ const Contact = () => {
         <LightRays
           raysOrigin="top-center"
           raysColor="#4F46E5"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays"
+          raysSpeed={1}
+          lightSpread={2}
+          rayLength={3}
+          fadeDistance={2}
+          saturation={2}
+          followMouse={false}
+          noiseAmount={0}
+          distortion={0}
         />
       </div>
 
@@ -162,10 +162,7 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button
-                  type="submit"
-                  className="button-secondary"
-                >
+                <button type="submit" className="button-secondary">
                   Send Message
                 </button>
 
