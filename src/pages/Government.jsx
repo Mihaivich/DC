@@ -116,7 +116,7 @@ const Government = () => {
                 gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
               }}
             >
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="mb-4 font-bold text-white drop-shadow-md"
                   style={{
@@ -132,7 +132,7 @@ const Government = () => {
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="mb-4 font-bold text-white drop-shadow-md"
                   style={{
@@ -148,7 +148,7 @@ const Government = () => {
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="mb-4 font-bold text-white drop-shadow-md"
                   style={{
@@ -164,7 +164,7 @@ const Government = () => {
                 </p>
               </div>
 
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg">
+              <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="mb-4 font-bold text-white drop-shadow-md"
                   style={{

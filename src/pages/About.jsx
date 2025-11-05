@@ -99,7 +99,7 @@ const About = () => {
               Our Values
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="text-white font-bold mb-4 drop-shadow-md"
                   style={{ fontSize: "1.5rem" }}
@@ -114,7 +114,7 @@ const About = () => {
                   that exceed expectations.
                 </p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="text-white font-bold mb-4 drop-shadow-md"
                   style={{ fontSize: "1.5rem" }}
@@ -129,7 +129,7 @@ const About = () => {
                   dealings.
                 </p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="text-white font-bold mb-4 drop-shadow-md"
                   style={{ fontSize: "1.5rem" }}
@@ -144,7 +144,7 @@ const About = () => {
                   business challenges.
                 </p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30">
+              <div className="bg-white/20 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-white/30 transition-transform duration-300 hover:-translate-y-3">
                 <h3
                   className="text-white font-bold mb-4 drop-shadow-md"
                   style={{ fontSize: "1.5rem" }}
