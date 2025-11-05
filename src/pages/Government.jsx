@@ -8,7 +8,7 @@ const Government = () => {
       {/* ColorBends Background with Red Theme */}
       <div className="fixed inset-0 z-0">
         <ColorBends 
-          colors={['#FF0000', '#FF4444', '#FF6666', '#CC0000']}
+          colors={['#0EA5E9', '#38BDF8', '#22D3EE', '#3B82F6', '#2563EB', '#1D4ED8']}
           speed={0.3}
           transparent={true}
           scale={1.2}

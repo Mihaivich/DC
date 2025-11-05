@@ -16,7 +16,21 @@ const Home = () => {
       <section className="relative flex items-center justify-center text-white text-center h-screen overflow-hidden">
         {/* ColorBends 背景 */}
         <div className="fixed inset-0 z-0">
-          <ColorBends />
+          <ColorBends
+            colors={[
+              '#0F172A', // deep navy (slate-900)
+              '#1E3A8A', // deep blue (blue-900)
+              '#3730A3', // indigo-800
+              '#6D28D9'  // violet-700
+            ]}
+            // colors={[
+            //   "#7F1D1D", // dark red (red-900)
+            //   "#7C2D12", // dark amber/orange (amber-900)
+            //   "#064E3B", // deep green (emerald-900)
+            //   "#0F172A", // deep navy (slate-950)
+            //   "#3B0764", // deep violet (violet-950)
+            // ]}
+          />
         </div>
 
         {/* 半透明遮罩层增强文字可读性 */}
