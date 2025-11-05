@@ -66,7 +66,11 @@ const GoogleMap = () => {
               src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${chicagoLat},${chicagoLng}&zoom=15`}
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{
+                border: 0,
+                filter:
+                  "invert(90%) hue-rotate(180deg) saturate(80%) contrast(85%)",
+              }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -82,7 +86,11 @@ const GoogleMap = () => {
               src={`https://www.google.com/maps/embed/v1/place?key=${API_KEY}&q=${dallasLat},${dallasLng}&zoom=15`}
               width="100%"
               height="100%"
-              style={{ border: 0 }}
+              style={{
+                border: 0,
+                filter:
+                  "invert(90%) hue-rotate(180deg) saturate(80%) contrast(85%)",
+              }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
