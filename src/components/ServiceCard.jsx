@@ -2,7 +2,7 @@ import React from 'react';
 
 const ServiceCard = ({ icon, title, description, features }) => {
   return (
-    <div className="bg-white/10 backdrop-blur-sm border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
+    <div className="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-xl shadow-lg transition-transform duration-300 hover:-translate-y-3">
       <div className="mb-5" style={{ fontSize: '2.5rem', color: 'white' }}>
         <i className={icon}></i>
       </div>
