@@ -89,7 +89,7 @@ const GoogleMap = () => {
               style={{
                 border: 0,
                 filter:
-                  "invert(90%) hue-rotate(180deg) saturate(80%) contrast(85%)",
+                  "invert(95%) hue-rotate(180deg) saturate(70%) contrast(80%)",
               }}
               allowFullScreen=""
               loading="lazy"
