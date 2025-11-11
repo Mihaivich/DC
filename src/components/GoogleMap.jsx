@@ -5,12 +5,12 @@ const GoogleMap = () => {
   const API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
 
   // Chicago Office coordinates: 2045 W Grand Ave, Chicago, IL
-  const chicagoLat = 41.890574;
-  const chicagoLng = -87.681302;
+  const chicagoLat = 41.890694;
+  const chicagoLng = -87.6793461;
 
   // Dallas Office coordinates: 5473 Blair Rd, Dallas, TX
-  const dallasLat = 32.8852625;
-  const dallasLng = -96.7690827;
+  const dallasLat = 32.885349;
+  const dallasLng = -96.7671411;
 
   return (
     <div className="w-full">
