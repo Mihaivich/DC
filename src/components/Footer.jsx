@@ -45,6 +45,7 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/diversity-connected/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Diversity Connected's LinkedIn profile"
                 className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -56,6 +57,7 @@ const Footer = () => {
                 href="https://x.com/i/flow/login?redirect_after_login=%2Fdiverse_connect"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Diversity Connected's X profile"
                 className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -67,6 +69,7 @@ const Footer = () => {
                 href="https://www.facebook.com/diversityconnected"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Diversity Connected's Facebook profile"
                 className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",
@@ -78,6 +81,7 @@ const Footer = () => {
                 href="https://www.instagram.com/diversityconnected/"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Diversity Connected's Instagram profile"
                 className="flex items-center justify-center w-10 h-10 rounded-full text-white no-underline transition-all duration-300 ease-in-out hover:transform hover:-translate-y-1 social-glow"
                 style={{
                   backgroundColor: "rgba(255, 255, 255, 0.1)",

@@ -218,6 +218,7 @@ const Contact = () => {
                     href="https://www.linkedin.com/company/diversity-connected/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit Diversity Connected's LinkedIn profile"
                     className="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white no-underline transition-all duration-300 hover:-translate-y-1 shadow-lg social-glow"
                   >
                     <i className="fab fa-linkedin"></i>
@@ -226,6 +227,7 @@ const Contact = () => {
                     href="https://x.com/i/flow/login?redirect_after_login=%2Fdiverse_connect"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit Diversity Connected's X profile"
                     className="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white no-underline transition-all duration-300 hover:-translate-y-1 shadow-lg social-glow"
                   >
                     <i className="fab fa-x-twitter"></i>
@@ -234,6 +236,7 @@ const Contact = () => {
                     href="https://www.facebook.com/diversityconnected"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit Diversity Connected's Facebook profile"
                     className="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white no-underline transition-all duration-300 hover:-translate-y-1 shadow-lg social-glow"
                   >
                     <i className="fab fa-facebook"></i>
@@ -242,6 +245,7 @@ const Contact = () => {
                     href="https://www.instagram.com/diversityconnected/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit Diversity Connected's Instagram profile"
                     className="flex items-center justify-center w-10 h-10 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full text-white no-underline transition-all duration-300 hover:-translate-y-1 shadow-lg social-glow"
                   >
                     <i className="fab fa-instagram"></i>
