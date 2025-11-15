@@ -1,45 +1,36 @@
-import React from "react";
+import React, { useState } from "react";
 import PageHeader from "../components/PageHeader";
 import DarkVeil from "../components/DarkVeil";
 import ChromaGrid from "../components/ChromaGrid";
 import sara from "../assets/images/sara.png";
-import john from "../assets/images/john.jpg";
-import david from "../assets/images/david.png";
-import michael from "../assets/images/michael.png";
 
 const About = () => {
+  const [showDetails, setShowDetails] = useState(false);
+
+  const leaderInfo = {
+    image: sara,
+    title: "Sara Gregory",
+    subtitle: "Founder & CEO",
+    borderColor: "#4F46E5",
+    gradient: "linear-gradient(145deg,#4F46E5,#000)",
+    bio: 'Sara Gregory is a seasoned business leader with over two decades of experience in consulting, operations, and analytics. Prior to founding Diversity Connected, she identified a gap where mid-size engagements were dismissed by larger firms. This inspired her boutique consultancy specializing in operational excellence, project management, and data analytics. Under her leadership, Diversity Connected serves Fortune 500 corporations, government agencies, and start-ups. She also founded the "Auntie Series" mentorship programme for women entrepreneurs.',
+    achievements: [
+      "Founded Diversity Connected in 2004",
+      "Led partnerships with Fortune 500 companies",
+      "Champion of diversity and inclusion initiatives",
+      "Expert in strategic business transformation",
+    ],
+    email: "sara.gregory@diversityconnected.com",
+    linkedin: "linkedin.com/in/saragregory",
+  };
+
   const items = [
     {
-      image: sara,
-      title: "Sara Gregory",
-      subtitle: "Founder & CEO",
-      borderColor: "#4F46E5",
-      gradient: "linear-gradient(145deg,#4F46E5,#000)",
-      url: "https://github.com/",
-    },
-    {
-      image: john,
-      title: "John Smith",
-      subtitle: "COO",
-      borderColor: "#10B981",
-      gradient: "linear-gradient(210deg,#10B981,#000)",
-      url: "https://linkedin.com/in/",
-    },
-    {
-      image: david,
-      title: "David Kim",
-      subtitle: "Director of PM",
-      borderColor: "#F59E0B",
-      gradient: "linear-gradient(165deg,#F59E0B,#000)",
-      url: "https://dribbble.com/",
-    },
-    {
-      image: michael,
-      title: "Michael Brown",
-      subtitle: "Head of GR",
-      borderColor: "#EF4444",
-      gradient: "linear-gradient(195deg,#EF4444,#000)",
-      url: "https://kaggle.com/",
+      image: leaderInfo.image,
+      title: leaderInfo.title,
+      subtitle: leaderInfo.subtitle,
+      borderColor: leaderInfo.borderColor,
+      gradient: leaderInfo.gradient,
     },
   ];
 
@@ -167,14 +158,59 @@ const About = () => {
               className="text-center mb-8 font-bold text-white drop-shadow-lg"
               style={{ fontSize: "2.2rem" }}
             >
-              Our Leadership Team
+              Our Founder
             </h2>
 
-            {/* 使用 ChromaGrid 替换 TeamMember，保持原有的网格布局 */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-8 lg:gap-8">
-              <div className="h-96 sm:h-96 lg:h-80 relative mb-8 sm:mb-8 lg:mb-0">
+            {/* Desktop Layout - ChromaGrid with Side Panel */}
+            <div className="hidden lg:block">
+              <div className="grid grid-cols-1 gap-8">
+                <div className="relative h-auto">
+                  <div
+                    className="w-fit mx-auto"
+                    onMouseEnter={() => setShowDetails(true)}
+                    onMouseLeave={() => setShowDetails(false)}
+                  >
+                    <ChromaGrid
+                      items={items}
+                      radius={100}
+                      damping={0.45}
+                      fadeOut={0.6}
+                      ease="power3.out"
+                    />
+                  </div>
+
+                  {/* Floating Detail Panel - Absolute positioned */}
+                  <div
+                    className={`absolute left-[calc(50%+180px)] top-0 right-0 h-[375px] transition-all duration-500 ${
+                      showDetails
+                        ? "opacity-100 translate-x-0"
+                        : "opacity-0 -translate-x-8 pointer-events-none"
+                    }`}
+                  >
+                    <div className="bg-white/10 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/20 p-8 h-full flex items-center">
+                      <div>
+                        <h4 className="text-xl font-bold text-white mb-4">
+                          About Sara Gregory
+                        </h4>
+                        <p className="text-white/90 leading-relaxed text-sm">
+                          {leaderInfo.bio}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Mobile/Tablet Layout - ChromaGrid with Bottom Panel */}
+            <div className="lg:hidden flex flex-col items-center">
+              <div
+                className="relative"
+                onTouchStart={() => setShowDetails(!showDetails)}
+                onClick={() => setShowDetails(!showDetails)}
+              >
                 <ChromaGrid
-                  items={[items[0]]}
+                  items={items}
                   radius={100}
                   damping={0.45}
                   fadeOut={0.6}
@@ -182,34 +218,24 @@ const About = () => {
                 />
               </div>
 
-              <div className="h-96 sm:h-96 lg:h-80 relative mb-8 sm:mb-8 lg:mb-0">
-                <ChromaGrid
-                  items={[items[1]]}
-                  radius={100}
-                  damping={0.45}
-                  fadeOut={0.6}
-                  ease="power3.out"
-                />
-              </div>
-
-              <div className="h-96 sm:h-96 lg:h-80 relative mb-8 sm:mb-8 lg:mb-0">
-                <ChromaGrid
-                  items={[items[2]]}
-                  radius={100}
-                  damping={0.45}
-                  fadeOut={0.6}
-                  ease="power3.out"
-                />
-              </div>
-
-              <div className="h-96 sm:h-96 lg:h-80 relative">
-                <ChromaGrid
-                  items={[items[3]]}
-                  radius={100}
-                  damping={0.45}
-                  fadeOut={0.6}
-                  ease="power3.out"
-                />
+              {/* Detail Panel Below */}
+              <div
+                className={`mt-8 w-full max-w-md transition-all duration-500 ${
+                  showDetails
+                    ? "opacity-100 max-h-screen"
+                    : "opacity-0 max-h-0 overflow-hidden"
+                }`}
+              >
+                <div className="bg-white/10 backdrop-blur-2xl rounded-2xl shadow-2xl border border-white/20 p-6">
+                  <div>
+                    <h4 className="text-xl font-bold text-white mb-3">
+                      About Sara Gregory
+                    </h4>
+                    <p className="text-white/90 leading-relaxed text-sm">
+                      {leaderInfo.bio}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
