@@ -205,9 +205,12 @@ const About = () => {
             {/* Mobile/Tablet Layout - ChromaGrid with Bottom Panel */}
             <div className="lg:hidden flex flex-col items-center">
               <div
-                className="relative"
-                onTouchStart={() => setShowDetails(!showDetails)}
-                onClick={() => setShowDetails(!showDetails)}
+                className="relative cursor-pointer touch-manipulation"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setShowDetails(!showDetails);
+                }}
+                style={{ WebkitTapHighlightColor: 'transparent' }}
               >
                 <ChromaGrid
                   items={items}
